@@ -15,6 +15,7 @@ end
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'pundit'
+gem 'pg'
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'
@@ -25,10 +26,8 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
-  gem 'sqlite3'
 end
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 group :test do
