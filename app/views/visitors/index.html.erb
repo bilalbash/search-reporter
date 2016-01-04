@@ -1,2 +1,18 @@
 <h3>Welcome</h3>
-<p><%#= link_to 'Users:', users_path %> <%#= User.count %> Google search reporter</p>
+<p> Google search reporter</p>
+
+<% if current_user %>
+
+    <div id="file_info">
+    </div>
+
+    <%= form_tag '/upload_csv', id: 'fileUploadForm' do %>
+      <%= file_field_tag :file %>
+
+      <%= hidden_field_tag :user_token, current_user.authentication_token %>
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+      <%= submit_tag 'Upload', class: 'btn btn-primary', id: 'fileUploadFormSubmitButton' %>
+    <% end %>
+
+<% end %>

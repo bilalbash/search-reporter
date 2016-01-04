@@ -14,4 +14,17 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require jquery-fileupload/basic
 //= require_tree .
+//= require_self
+
+
+
+$(function(){
+    console.log('application.js');
+
+    //$('#fileUploadForm').fileupload({
+    //    dataType: 'script'
+    //});
+
+});
